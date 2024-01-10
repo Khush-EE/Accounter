@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<%- include ("partials/header") %>
+<body>
+    <div id="container">
+        <% if(msg != "") { %>
+    <h3><%= msg %></h3>
+    <% } %>
+    <div id="box">
+        <h1>
+            Accounter
+        </h1>
+    <form action="/signup", method="post">
+        <input type="text" name="Name" placeholder="Name">
+        <input type="email" name="Email" placeholder="Email">
+        <input type="number" name="Number" placeholder="Number">
+        <input type="password" name="Password" placeholder="Password">
+        <input type="submit" value="Sign Up" id="btn">
+    </form>
+    </div>
+    </div>
+</body>
+</html>
